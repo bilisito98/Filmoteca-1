@@ -50,7 +50,7 @@ function addModalPoster(event) {
 
 }
 clearContent.addEventListener('click', () => {
-  console.log('sirveeee el CLICKKKKKKKKKKKKKKK')
+  console.log('sirveeee el CLICK')
 
 })
 
