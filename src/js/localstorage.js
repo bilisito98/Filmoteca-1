@@ -1,12 +1,12 @@
 const watchedButton = document.querySelector('.modal-watched');
 const queueButton = document.querySelector('.modal-queue');
 
-// Agregar manejador de evento al botón "Watched" (Vistas)
+//botón "Watched" (Vistas)
 watchedButton.addEventListener('click', () => {
-  // Crear objeto de datos de la película
+  //datos de la película
   const movieData = {
     id: `${watchedButton.id}`,
-    // Agrega las propiedades de la película que desees almacenar
+    // Agg las propiedades de la película que desees almacenar
   };
 
   // Obtener las películas vistas del Local Storage (si existen)
@@ -28,7 +28,7 @@ watchedButton.addEventListener('click', () => {
   console.log('Película marcada como vista');
 });
 
-// Agregar manejador de evento al botón "Queue" (Cola)
+// Agregar "Queue"
 queueButton.addEventListener('click', () => {
   // Crear objeto de datos de la película
   const movieData = {
@@ -36,7 +36,7 @@ queueButton.addEventListener('click', () => {
     // Agrega las propiedades de la película que desees almacenar
   };
 
-  // Obtener la lista de películas en cola del Local Storage (si existe)
+  // Obtener lista de películas en cola del Local Storage
   const queueMovies = JSON.parse(localStorage.getItem('queueMovies')) || [];
 
   const movieExists = queueMovies.some(movie => movie.id === movieData.id);

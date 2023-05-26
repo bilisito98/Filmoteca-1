@@ -1,10 +1,11 @@
 @import '../utils/colors';
 
 
-.container-movies{
+.container-movies {
   display: flex;
   flex-direction: column;
 }
+
 .body-movies {
   padding: 0 3rem;
   margin: 60px 0px 50px 0px;
@@ -19,6 +20,7 @@
   align-items: center;
   gap: 2rem;
   padding: 0;
+
   // width: auto;
   &__image {
     width: 17.38rem;
@@ -26,6 +28,7 @@
     border-radius: 5px;
   }
 }
+
 .movie-card {
   width: 17.38rem;
   border-radius: 5px;
@@ -39,6 +42,7 @@
     transition: all 150ms ease-out;
   }
 }
+
 @media (min-width: 300px) and (max-width: 767px) {
   .movie-card {
     display: flex;
@@ -46,11 +50,13 @@
     margin: 0;
     width: auto;
   }
-  .container-movies{
+
+  .container-movies {
     width: 100%;
     margin: 0;
     padding: 0;
   }
+
   .cardsMovie {
     &__image {
       width: 100%;
@@ -59,6 +65,7 @@
       object-fit: cover;
     }
   }
+
   .movie {
     &__genre {
       font-size: 3vw;
@@ -66,6 +73,7 @@
       font-size-adjust: initial;
       line-height: 20px;
     }
+
     &__title {
       font-size: 3vw;
       line-height: 25px;
@@ -82,67 +90,56 @@
     margin: 0 auto;
   }
 
-  .body-movies{
+  .body-movies {
     margin: 50px auto;
   }
 }
 
-.pagination{
+
+
+
+
+.pagination {
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 10vh;
-  padding: 10px;
-}
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 
-.pagination ul{
-  display: flex;
-  background: #fff;
-  padding: 8px;
-  border-radius: 50px;
-}
-.pagination ul li{
-  color: var(--button-color);
-  list-style: none;
-  line-height: 45px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  .fa-angle-left,
+  .fa-angle-right {
+    border-radius: 5px;
+    background: #f7f7f7;
+    width: 40px;
+    height: 40px;
+    border: none;
 
-.pagination ul li.numb{
-  border-radius: 50%;
-  height: 45px;
-  width: 45px;
-  margin: 0 3px;
-}
+    &:hover {
+      cursor: pointer;
+      background: #ff6b01;
+      color: white;
+    }
+  }
 
-.pagination ul li.dots{
-  font-size: 22px;
-  cursor: default;
-}
+  .pages-list {
+    gap: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.pagination ul li.btn{
-  padding: 0 20px;
+    button {
+      cursor: pointer;
+      border-radius: 5px;
+      background: white;
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      border: none;
+    }
 
-}
-
-.pagination ul li.prev{
-  border-radius: 25px 5px 5px 25px;
-
-}
-
-.pagination ul li.next{
-  border-radius: 5px 25px 25px 5px;
-
-}
-
-.pagination ul li.active,
-.pagination ul li.numb:hover,
-.pagination ul li.btn:hover{
-  color: #fff;
-  background: var(--button-color);
-
+    button:hover {
+      background: #ff6b01;
+      color: white;
+    }
+  }
 }
