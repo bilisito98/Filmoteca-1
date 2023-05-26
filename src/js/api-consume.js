@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 export { services };
 
 const BASE_URL = 'https://api.themoviedb.org/3';
